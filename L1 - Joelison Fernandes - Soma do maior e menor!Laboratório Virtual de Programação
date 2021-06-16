@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main () {
+    
+    int vetorG[5], numero = 0, menor = 0, maior = 0;
+    
+    for(int i = 0 ; i < 5  ; i++) {
+        scanf("%d", &vetorG[i]);
+    }
+    for(int i = 0 ; i < 5 ; i++) {
+        if(i == 0) {
+            maior = vetorG[i];
+            menor = vetorG[i];
+        }
+        
+        if(vetorG[i] > maior) {
+            maior = vetorG[i];
+        }
+        if(vetorG[i] < menor) {
+            menor = vetorG[i];
+        }
+    }
+    numero = maior + menor;
+    printf("%d", numero);
+}
