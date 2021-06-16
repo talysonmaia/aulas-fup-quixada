@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <math.h>
+
+int main () {
+    
+    int amount, student = 0, teacher = 0;
+    scanf("%d", &amount);
+    int vetorD[amount], vetorPar[amount], vetorIm[amount];
+    
+    for(int i = 0 ; i < amount ; i++) 
+    {
+        scanf("%d", &vetorD[i]);
+    }    
+    for(int i = 0 ; i < amount ; i++) 
+    {
+        if(vetorD[i] % 2) {
+            vetorPar[teacher] = vetorD[i];
+            teacher++;
+        }
+        else {
+            vetorIm[student] = vetorD[i];
+            student++;
+        }
+        
+    }
+    
+    for(int i = 0 ; i < teacher ; i++){
+        printf("%d ", vetorPar[i]);
+    }
+    printf("\n");
+    for(int i = 0 ; i < student ; i++) {
+        printf("%d ", vetorIm[i]);
+    }
+}
